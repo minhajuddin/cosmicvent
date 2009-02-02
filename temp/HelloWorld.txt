@@ -1,0 +1,1 @@
+This is a simple commit to test if the git repository is working fine
