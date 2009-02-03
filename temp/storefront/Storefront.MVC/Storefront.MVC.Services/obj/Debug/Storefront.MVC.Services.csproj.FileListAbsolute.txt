@@ -1,0 +1,7 @@
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\bin\Debug\Storefront.MVC.Services.dll
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\bin\Debug\Storefront.MVC.Services.pdb
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\obj\Debug\ResolveAssemblyReference.cache
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\obj\Debug\Storefront.MVC.Services.dll
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\obj\Debug\Storefront.MVC.Services.pdb
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\bin\Debug\Storefront.MVC.Data.dll
+E:\_repository\git\cosmicvent\temp\storefront\Storefront.MVC\Storefront.MVC.Services\bin\Debug\Storefront.MVC.Data.pdb

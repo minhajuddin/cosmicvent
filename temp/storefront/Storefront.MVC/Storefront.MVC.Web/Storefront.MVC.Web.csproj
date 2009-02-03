@@ -102,6 +102,12 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Storefront.MVC.Services\Storefront.MVC.Services.csproj">
+      <Project>{DFD16BC9-CB93-4B20-B16A-2996794D28BC}</Project>
+      <Name>Storefront.MVC.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
