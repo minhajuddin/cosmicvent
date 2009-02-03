@@ -6,5 +6,7 @@ namespace Storefront.MVC.Data.DataAccess
     {
         IQueryable<Product> GetProducts();
         IQueryable<Category> GetCategories();
+        IQueryable<ProductReview> GetReviews();
+        IQueryable<ProductDescription> GetProductDescriptions();
     }
 }

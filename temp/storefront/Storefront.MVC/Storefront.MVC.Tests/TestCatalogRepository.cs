@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Storefront.MVC.Data;
@@ -35,7 +36,7 @@ namespace Storefront.MVC.Tests
                 }
             }
 
-            return result.AsQueryable<Product>();
+            return result.AsQueryable();
         }
 
         public IQueryable<Category> GetCategories()
@@ -57,7 +58,93 @@ namespace Storefront.MVC.Tests
                 result.Add(c);
             }
 
-            return result.AsQueryable<Category>();
+            return result.AsQueryable();
+        }
+
+        public IQueryable<ProductReview> GetReviews()
+        {
+            IList<Product> products = GetProducts().ToList();
+            IList<ProductReview> productReviews = new List<ProductReview>();
+            int reviewID = 1;
+
+            foreach (Product product in products)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    ProductReview productReview = new ProductReview
+                    {
+                        Author = "minhajuddin",
+                        Body = "This is a product review",
+                        CreatedOn = DateTime.Now,
+                        Email = "min@minhajuddin.com",
+                        ProductID = product.ID,
+                        ID = reviewID
+                    };
+
+                    productReviews.Add(productReview);
+                    reviewID++;
+                }
+            }
+
+            return productReviews.AsQueryable();
+        }
+
+        public IQueryable<ProductDescription> GetProductDescriptions()
+        {
+            IList<Product> products = GetProducts().ToList();
+            IList<ProductDescription> productDescriptions = new List<ProductDescription>();
+
+            int productDescriptionID = 1;
+
+            foreach (Product p in products)
+            {
+                productDescriptions.Add(new ProductDescription
+                                            {
+                                                ID = productDescriptionID,
+                                                Locale = "en",
+                                                Body = "English description",
+                                                ProductID = p.ID
+                                            });
+                productDescriptionID++;
+
+                productDescriptions.Add(new ProductDescription
+                {
+                    ID = productDescriptionID,
+                    Locale = "fr",
+                    Body = "Francais description",
+                    ProductID = p.ID
+                });
+                productDescriptionID++;
+
+                productDescriptions.Add(new ProductDescription
+                {
+                    ID = productDescriptionID,
+                    Locale = "de",
+                    Body = "Deutsche description",
+                    ProductID = p.ID
+                });
+                productDescriptionID++;
+
+                productDescriptions.Add(new ProductDescription
+                {
+                    ID = productDescriptionID,
+                    Locale = "es",
+                    Body = "Espanol description",
+                    ProductID = p.ID
+                });
+                productDescriptionID++;
+
+                productDescriptions.Add(new ProductDescription
+                {
+                    ID = productDescriptionID,
+                    Locale = "is",
+                    Body = "Icelandic description",
+                    ProductID = p.ID
+                });
+                productDescriptionID++;
+            }
+
+            return productDescriptions.AsQueryable();
         }
     }
 }

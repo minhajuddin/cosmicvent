@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Storefront.MVC.Data
 {
     public class Product
@@ -21,5 +23,7 @@ namespace Storefront.MVC.Data
         public string Description { get; set; }
         public decimal Price { get; set; }
         public decimal DiscountPercent { get; set; }
+        public IList<ProductReview> Reviews { get; set; }
+        public IList<ProductDescription> LocalizedDescriptions { get; set; }
     }
 }

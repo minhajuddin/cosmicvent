@@ -19,5 +19,19 @@ namespace Storefront.MVC.Data.Filters
                    where product.ID == ID
                    select product;
         }
+
+        public static IQueryable<ProductReview> ReviewsForProduct(this IQueryable<ProductReview> qry, int id)
+        {
+            return from review in qry
+                    where review.ProductID == id
+                    select review;
+        }
+
+        public static IQueryable<ProductDescription> DescriptionsForProduct(this IQueryable<ProductDescription> qry, int id)
+        {
+            return from description in qry
+                   where description.ProductID == id
+                   select description;
+        }
     }
 }

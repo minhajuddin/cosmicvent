@@ -33,7 +33,23 @@ namespace Storefront.MVC.Services
 
         public Product GetProductByID(int id)
         {
-            return _repository.GetProducts().WithID(id).Single();
+            return GetProductByID(id, System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
+        }
+        
+        public Product GetProductByID(int id, string locale)
+        {
+            //Get the product from the repository
+            Product product = _repository.GetProducts().WithID(id).Single();
+
+            //Get the reviews for the product
+            product.Reviews = _repository.GetReviews().ReviewsForProduct(id).ToList();
+
+            //Get the descriptions of the product
+            product.LocalizedDescriptions = _repository.GetProductDescriptions().DescriptionsForProduct(id).ToList();
+
+            product.Description = product.LocalizedDescriptions.Where(x => x.Locale == locale).Single().Body;
+
+            return product;
         }
 
         public IList<Category> GetCategories()
@@ -53,5 +69,6 @@ namespace Storefront.MVC.Services
 
             return parents;
         }
+
     }
 }

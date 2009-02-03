@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MbUnit.Framework;
@@ -15,12 +16,11 @@ namespace Storefront.MVC.Tests
         private CatalogService service;
 
         [SetUp]
-        public void Inintialize()
+        public void Initialize()
         {
             repository = new TestCatalogRepository();
             service = new CatalogService(repository);
         }
-
 
         [Test]
         public void Product_Should_Have_Name_Description_Price_Category_Discount_Fields()
@@ -119,6 +119,74 @@ namespace Storefront.MVC.Tests
         {
             Product product = service.GetProductByID(1);
             Assert.IsNotNull(product, "the method GetProductByID doesn't work with the service");
+        }
+
+
+        //Product Review tests
+        [Test]
+        public void Review_Should_Have_ProductID_Author_Email_Body_CreatedOn_Fields()
+        {
+            ProductReview review = new ProductReview("minhajuddin", "min@minhajuddin.com", 3, "Nice product");
+            Assert.AreEqual("minhajuddin", review.Author, "the author of the product review isn't setup correctly");
+            Assert.AreEqual("min@minhajuddin.com", review.Email, "the email of the product review isn't setup correctly");
+            Assert.AreEqual(3, review.ProductID, "the product id of the product review isn't setup correctly");
+            Assert.AreEqual("Nice product", review.Body, "the body of the product review isn't setup correctly");
+            Assert.AreEqual(DateTime.Now.Date, review.CreatedOn.Date, "the date of the product review isn't setup correctly");
+        }
+
+        [Test]
+        public void CatalogRepository_Can_Return_Reviews()
+        {
+            var reviews = repository.GetReviews().ToList();
+            Assert.IsNotNull(reviews, "the catalog repository doesn't return any reviews");
+            Assert.IsTrue(reviews.Count>0,"the repository doesn't return any reviews");
+        }
+
+        [Test]
+        public void CatalogService_Returns_5_Reviews_Per_Product_With_ID1()
+        {
+            Product products = service.GetProductByID(1);
+            Assert.AreEqual(5, products.Reviews.Count, "the count of reviews for product is wrong");
+        }
+
+
+        [Test]
+        public void ProductDescription_Should_Have_Locale_Body_ProductID()
+        {
+            ProductDescription pd = new ProductDescription
+                                        {Body = "English Description", Locale = "en", ProductID = 3};
+
+            Assert.AreEqual("English Description", pd.Body, "the body of the product description is being incorrectly set in the constructor");
+            Assert.AreEqual(3, pd.ProductID, "product id incorrect");
+            Assert.AreEqual("en", pd.Locale, "locale incorrect");
+        }
+
+        [Test]
+        public void CatalogRepository_Can_Return_ProductDescriptions()
+        {
+            var descriptions = repository.GetProductDescriptions();
+            Assert.IsTrue(descriptions.Count()>0,"the repository doesn't return the product descriptions");
+        }
+
+        [Test]
+        public void CatalogService_Returns_5_Descriptions_With_ProductID1()
+        {
+            var descriptions = service.GetProductByID(1).LocalizedDescriptions;
+            Assert.AreEqual(5, descriptions.Count, "the service doesn't return 5 product descriptions");
+        }
+
+        [Test]
+        public void CatalogService_Sets_Default_ProductDescription_Based_On_FrenchUICulture()
+        {
+            var description = service.GetProductByID(1, "fr").Description;
+            Assert.AreEqual("Francais description", description, "FrenchUICulture problem");
+        }
+
+        [Test]
+        public void CatalogService_Sets_Default_ProductDescription()
+        {
+            var description = service.GetProductByID(1).Description;
+            Assert.AreEqual("English description", description, "default locale doesn't work");
         }
     }
 

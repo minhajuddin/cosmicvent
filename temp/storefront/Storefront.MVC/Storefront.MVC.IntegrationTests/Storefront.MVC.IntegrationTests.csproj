@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BDD3AE4F-9DE7-4BF4-9F62-96E74C5368F5}</ProjectGuid>
+    <ProjectGuid>{DB385EAD-C5EF-4C9A-98B9-5935E0DD03B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Storefront.MVC.Data</RootNamespace>
-    <AssemblyName>Storefront.MVC.Data</AssemblyName>
+    <RootNamespace>Storefront.MVC.IntegrationTests</RootNamespace>
+    <AssemblyName>Storefront.MVC.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,11 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MbUnit.Framework, Version=2.4.2.355, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5" />
     <Reference Include="System" />
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Xml.Linq">
@@ -48,45 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
-    <Compile Include="DataAccess\ICatalogRepository.cs" />
-    <Compile Include="DataAccess\LinqCatalog.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LinqCatalog.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SqlCatalogRepository.cs" />
-    <Compile Include="Filters\ProductFilters.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductDescription.cs" />
-    <Compile Include="ProductReview.cs" />
+    <Compile Include="CatalogIntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataAccess\LinqCatalog.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LinqCatalog.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Diagram\Catalog.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="DataAccess\LinqCatalog.dbml.layout">
-      <DependentUpon>LinqCatalog.dbml</DependentUpon>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
+    <ProjectReference Include="..\Storefront.MVC.Data\Storefront.MVC.Data.csproj">
+      <Project>{BDD3AE4F-9DE7-4BF4-9F62-96E74C5368F5}</Project>
+      <Name>Storefront.MVC.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storefront.MVC.Services\Storefront.MVC.Services.csproj">
+      <Project>{DFD16BC9-CB93-4B20-B16A-2996794D28BC}</Project>
+      <Name>Storefront.MVC.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storefront.MVC.Web\Storefront.MVC.Web.csproj">
+      <Project>{7F6803B0-7A3E-40F0-943C-B6EB789F6A2B}</Project>
+      <Name>Storefront.MVC.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
