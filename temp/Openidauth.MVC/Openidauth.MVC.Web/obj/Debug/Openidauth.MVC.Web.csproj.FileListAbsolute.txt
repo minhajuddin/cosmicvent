@@ -1,0 +1,9 @@
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Web.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Web.pdb
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Service.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Service.pdb
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\obj\Debug\Openidauth.MVC.Web.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\obj\Debug\Openidauth.MVC.Web.pdb
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Data.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Web\bin\Openidauth.MVC.Data.pdb

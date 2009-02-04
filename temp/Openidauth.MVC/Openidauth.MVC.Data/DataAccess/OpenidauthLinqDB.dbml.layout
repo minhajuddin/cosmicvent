@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="OpenidauthLinqDB">
+  <DataContextMoniker Name="/OpenidauthLinqDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b526bdd9-40ee-4348-86ec-1972fa3d6247" absoluteBounds="1, 1.875, 2, 2.24658447265625">
+      <DataClassMoniker Name="/OpenidauthLinqDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29efaea1-70ef-43b6-83fc-92c6bbe22f56" absoluteBounds="1.0150000000000001, 2.335, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

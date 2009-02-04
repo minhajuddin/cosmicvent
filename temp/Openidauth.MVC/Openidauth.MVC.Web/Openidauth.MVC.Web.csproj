@@ -102,6 +102,12 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Openidauth.MVC.Service\Openidauth.MVC.Service.csproj">
+      <Project>{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}</Project>
+      <Name>Openidauth.MVC.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

@@ -1,0 +1,6 @@
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\bin\Debug\Openidauth.MVC.Data.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\bin\Debug\Openidauth.MVC.Data.pdb
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\obj\Debug\ResolveAssemblyReference.cache
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\obj\Debug\Openidauth.MVC.Data.dll
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\obj\Debug\Openidauth.MVC.Data.pdb
+E:\_repository\git\cosmicvent\temp\Openidauth.MVC\Openidauth.MVC.Data\bin\Debug\Openidauth.MVC.Data.dll.config

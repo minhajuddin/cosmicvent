@@ -5,6 +5,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openidauth.MVC.Web", "Openi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openidauth.MVC.Tests", "Openidauth.MVC.Tests\Openidauth.MVC.Tests.csproj", "{B0AF37DF-7552-48F3-9B2C-08A6A25738D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Miscellaneous", "Miscellaneous", "{760F5807-7EC0-45A3-9A23-68B4D39BD395}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\openidauth\users\minhaj\OpenIdAuth\UserStories.txt = ..\..\..\..\openidauth\users\minhaj\OpenIdAuth\UserStories.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openidauth.MVC.Data", "Openidauth.MVC.Data\Openidauth.MVC.Data.csproj", "{46146D96-CFCA-4E70-B344-B2220F36E2FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openidauth.MVC.Service", "Openidauth.MVC.Service\Openidauth.MVC.Service.csproj", "{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +28,14 @@ Global
 		{B0AF37DF-7552-48F3-9B2C-08A6A25738D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0AF37DF-7552-48F3-9B2C-08A6A25738D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0AF37DF-7552-48F3-9B2C-08A6A25738D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46146D96-CFCA-4E70-B344-B2220F36E2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46146D96-CFCA-4E70-B344-B2220F36E2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46146D96-CFCA-4E70-B344-B2220F36E2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46146D96-CFCA-4E70-B344-B2220F36E2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B40C64-0A81-4D2B-81FC-F553F2CB1CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
